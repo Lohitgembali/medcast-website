@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MedCast McMaster</title>
+<meta name="description" content="MedCast is a student-led podcast at McMaster University about the people behind medical and science research.">
+<meta name="theme-color" content="#f7f4f0">
+<link rel="icon" href="assets/medcast-logo.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script>try{if(sessionStorage.getItem("mc-seen"))document.documentElement.classList.add("seen");sessionStorage.setItem("mc-seen","1")}catch(e){}</script>
+
+</head>
+<body>
+
+<div class="loader" aria-hidden="true">
+  <span class="logo"></span>
+  <svg viewBox="0 0 300 60" fill="none"><path d="M0 34h96l10-16 12 34 16-50 14 40 8-8h144" stroke="url(#lg)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><defs><linearGradient id="lg" x1="0" x2="300" y1="0" y2="0" gradientUnits="userSpaceOnUse"><stop stop-color="#f5c057"/><stop offset=".6" stop-color="#ff8a5c"/><stop offset="1" stop-color="#72012d"/></linearGradient></defs></svg>
+</div>
+<div class="progress" aria-hidden="true"></div>
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html"><span class="logo" aria-hidden="true"></span>MedCast</a>
+    <ul id="menu">
+      <li><a href="about.html">About</a></li>
+      <li><a href="episodes.html">Episodes</a></li>
+      <li><a href="team.html">Team</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a class="btn sm" href="get-involved.html">Get involved</a>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 9h16M4 15h16"/></svg></button>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero center">
+    <div class="wrap">
+      <p class="eyebrow grad">MedCast at McMaster</p>
+      <h1 class="intro"><span class="ln"><span>Research has a</span></span> <span class="ln"><span class="grad">human side.</span></span></h1>
+      <p class="sub">A student-led podcast about the people behind medicine and science.</p>
+      <div class="ctas"><a class="btn" href="get-involved.html">Get involved</a><a class="link" href="about.html">Explore the idea</a></div>
+    </div>
+    <div class="stage" data-p>
+      <div class="halo"></div>
+      <span class="logo hero-logo" role="img" aria-label="McMaster MedCast logo: an eagle in a lab coat speaking into a microphone"></span>
+      <span class="chip c1"><i style="background:var(--maroon)"></i>Research &amp; discovery</span>
+      <span class="chip c2"><i style="background:var(--gold)"></i>Career journeys</span>
+      <span class="chip c3"><i style="background:#b8323f"></i>Advice for students</span>
+    </div>
+  </section>
+  <div class="marquee" aria-hidden="true"><div class="track"><span>Research &amp; discovery</span><i>✦</i><span>Career journeys</span><i>✦</i><span>Advice for students</span><i>✦</i><span>Medicine</span><i>✦</i><span>Science</span><i>✦</i><span>Real stories</span><i>✦</i><span>Research &amp; discovery</span><i>✦</i><span>Career journeys</span><i>✦</i><span>Advice for students</span><i>✦</i><span>Medicine</span><i>✦</i><span>Science</span><i>✦</i><span>Real stories</span><i>✦</i></div></div>
+  <section class="night">
+    <div class="wrap">
+      <p class="say" id="say" data-text="Behind every paper is a person. A first question. An unexpected turn. A lab that took a chance on them. We start there, so research feels like something you could *join.*"></p>
+      <div class="big-date" data-p>
+        <p class="eyebrow">First recordings</p>
+        <h2>November 2026.</h2>
+        <p>We're sitting down with researchers to ask how they started, what their work means, and what they'd tell students today.</p>
+      </div>
+    </div>
+    <canvas id="wave" aria-hidden="true"></canvas>
+    <div class="wave-cap" aria-hidden="true"><span>Voice · 44.1 kHz</span><span>Lead II · 25 mm/s</span></div>
+  </section>
+  <section class="sec">
+    <div class="wrap">
+      <h2 class="sec-title center rise">Take a look around.</h2>
+      <div class="tiles">
+        <a class="lt rise" href="about.html"><span class="k">About</span><h3>Every episode.<br>Three questions.</h3><p>Who we are, and the idea behind every conversation.</p><span class="go">Read about MedCast</span><span class="art" aria-hidden="true">?</span></a>
+        <a class="lt mr rise" href="episodes.html"><span class="k">Episodes</span><h3>Episode 001 is in production.</h3><p>Our first recordings start this November.</p><span class="go">See what's coming</span><span class="art" aria-hidden="true">001</span></a>
+        <a class="lt gd rise" href="team.html"><span class="k">Team</span><h3>The students behind the mic.</h3><p>Our president, three interviewers, a manager and a tech lead.</p><div class="faces" aria-hidden="true"><span>LG</span><span>J</span><span>S</span><span>S</span><span>A</span><span>K</span></div><span class="go">Meet the team</span><span class="art" aria-hidden="true">6</span></a>
+        <a class="lt dk rise" href="get-involved.html"><span class="k">Get involved</span><h3>Make the show, or be on it.</h3><p>For McMaster students, researchers and guests.</p><span class="go">Find your way in</span><span class="art" aria-hidden="true">+</span></a>
+      </div>
+    </div>
+  </section>
+  <section class="close center">
+    <div class="wrap rise">
+      <span class="logo" aria-hidden="true"></span>
+      <h2>Let's talk <span class="grad">research.</span></h2>
+      <div class="row">
+        <a class="link" href="mailto:medcast.mcmaster@gmail.com">medcast.mcmaster@gmail.com</a>
+        <a class="link" href="https://www.instagram.com/medcastmcmaster/" target="_blank" rel="noopener">Instagram @medcastmcmaster</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="fcols">
+      <div><h4>Explore</h4><a href="index.html">Home</a><a href="about.html">About</a><a href="episodes.html">Episodes</a></div>
+      <div><h4>Club</h4><a href="team.html">Team</a><a href="get-involved.html">Get involved</a></div>
+      <div><h4>Contact</h4><a href="contact.html">Contact</a><a href="mailto:medcast.mcmaster@gmail.com">Email</a><a href="https://www.instagram.com/medcastmcmaster/" target="_blank" rel="noopener">Instagram</a></div>
+      <div><h4>Based at</h4><span>McMaster University<br>Hamilton, Ontario</span></div>
+    </div>
+    <div class="fbot"><span>© 2026 MedCast at McMaster University. A student-led club.</span><span>Made by students, for students.</span></div>
+  </div>
+  <div class="wordmark" aria-hidden="true">MedCast</div>
+</footer>
+
+<div class="cursor" aria-hidden="true"></div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="site.js"></script>
+</body>
+</html>
