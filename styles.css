@@ -435,3 +435,25 @@ footer{overflow:hidden;padding-bottom:0}
 .player-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 .feature-foot{position:relative;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;color:#8f868a;font-size:14px}
 .feature-foot .link{color:var(--gold)}
+
+/* Episodes layout: video with three tiles stacked beside it */
+.ep-top{display:grid;grid-template-columns:minmax(0,2.3fr) minmax(0,1fr);gap:20px;align-items:stretch}
+.ep-top .feature{grid-column:auto}
+.ep-side{display:flex;flex-direction:column;gap:20px}
+.ep-side .t{flex:1;min-height:0;padding:clamp(20px,2vw,28px)}
+.ep-side .t .stat{font-size:clamp(48px,5vw,72px);margin-top:12px}
+.ep-side .t .cap{font-size:17px}
+.ep-side .t.dark .cap{font-size:clamp(20px,1.8vw,24px);margin-top:12px}
+.ep-list{display:flex;flex-direction:column;gap:20px;margin-top:20px}
+.ep-list:empty{display:none}
+.ep-card{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:clamp(20px,3vw,40px);align-items:center;background:var(--tile);border-radius:28px;padding:clamp(18px,2.4vw,28px)}
+.ep-card .player-frame{box-shadow:0 20px 40px -20px rgba(60,0,20,.35)}
+.ep-info{display:flex;flex-direction:column;gap:10px}
+.ep-info .num{font-size:14px;font-weight:600;color:var(--maroon)}
+.ep-info h3{font-size:clamp(28px,3vw,40px)}
+.ep-info p{color:var(--mute);font-size:17px}
+@media (max-width:900px){
+  .ep-top,.ep-card{grid-template-columns:1fr}
+  .ep-side{display:grid;grid-template-columns:repeat(3,1fr)}
+}
+@media (max-width:620px){.ep-side{grid-template-columns:1fr}}

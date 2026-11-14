@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=202611141028">
+<link rel="stylesheet" href="styles.css?v=202611141035">
 </head>
 <body>
 
@@ -39,7 +39,7 @@
   </section>
   <section id="episodes">
     <div class="wrap">
-            <div class="bento">
+      <div class="ep-top">
         <article class="feature rise" id="ep1">
           <div class="feature-head">
             <span class="live"><i></i>Out now</span>
@@ -54,22 +54,32 @@
             <a class="link" href="https://youtu.be/AftTDh2l6xM" target="_blank" rel="noopener">Watch on YouTube</a>
           </div>
         </article>
-        <article class="t s2 gold rise">
-          <span class="k">In every conversation</span>
-          <span class="stat">3</span>
-          <span class="cap">questions: the research, the journey, the advice.</span>
-        </article>
-        <article class="t s2 rise">
-          <span class="k">Behind the mic</span>
-          <span class="stat">6</span>
-          <span class="cap">students making the show, from interviews to tech.</span>
-        </article>
-        <article class="t s2 dark rise">
-          <span class="k">Hear it first</span>
-          <span class="cap" style="margin-top:auto">Follow along on Instagram.</span>
-          <a class="link" href="https://www.instagram.com/medcastmcmaster/" target="_blank" rel="noopener">@medcastmcmaster</a>
-        </article>
+        <aside class="ep-side rise">
+          <article class="t gold">
+            <span class="k">In every conversation</span>
+            <span class="stat">3</span>
+            <span class="cap">questions: the research, the journey, the advice.</span>
+          </article>
+          <article class="t">
+            <span class="k">Behind the mic</span>
+            <span class="stat">6</span>
+            <span class="cap">students making the show, from interviews to tech.</span>
+          </article>
+          <article class="t dark">
+            <span class="k">Hear it first</span>
+            <span class="cap" style="margin-top:auto">Follow along on Instagram.</span>
+            <a class="link" href="https://www.instagram.com/medcastmcmaster/" target="_blank" rel="noopener">@medcastmcmaster</a>
+          </article>
+        </aside>
       </div>
+
+      <!-- More episodes: add each new one at the END of this list, using this pattern:
+      <article class="ep-card rise" id="ep2">
+        <div class="player-frame"><iframe src="https://www.youtube-nocookie.com/embed/VIDEO_ID?rel=0&amp;modestbranding=1&amp;color=white" title="McMaster MedCast Episode 002" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+        <div class="ep-info"><span class="num">Episode 002</span><h3>Title or guest</h3><p>One-line description.</p><a class="link" href="https://youtu.be/VIDEO_ID" target="_blank" rel="noopener">Watch on YouTube</a></div>
+      </article>
+      -->
+      <div class="ep-list" id="more-episodes"></div>
     </div>
   </section>
   <section class="wrap cta-band rise">
@@ -95,6 +105,6 @@
 
 <div class="cursor" aria-hidden="true"></div>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
-<script src="site.js?v=202611141028"></script>
+<script src="site.js?v=202611141035"></script>
 </body>
 </html>
