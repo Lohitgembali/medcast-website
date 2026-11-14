@@ -520,3 +520,6 @@ footer{overflow:hidden;padding-bottom:0}
 .slide-track .mono-av.photo{width:150px;height:150px}
 .slide-track .pcard .role{font-size:15px}
 .slide-track .person-btn .more{font-size:15px}
+
+/* Photos always fill their circle, whatever the card colour */
+.pcard .mono-av.photo,.pcard.c-g .mono-av.photo{background-color:#2a1a20;background-size:cover;background-position:center;background-repeat:no-repeat;border-color:rgba(255,255,255,.7)}
