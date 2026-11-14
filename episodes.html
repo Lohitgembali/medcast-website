@@ -73,11 +73,14 @@
         </aside>
       </div>
 
-      <!-- More episodes: add each new one at the END of this list, using this pattern:
-      <article class="ep-card rise" id="ep2">
-        <div class="player-frame"><iframe src="https://www.youtube-nocookie.com/embed/VIDEO_ID?rel=0&amp;modestbranding=1&amp;color=white" title="McMaster MedCast Episode 002" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
-        <div class="ep-info"><span class="num">Episode 002</span><h3>Title or guest</h3><p>One-line description.</p><a class="link" href="https://youtu.be/VIDEO_ID" target="_blank" rel="noopener">Watch on YouTube</a></div>
+      <!-- Adding a new episode (newest always comes first):
+      1. The new episode takes the big card at the top (the .feature card, next to the three tiles).
+      2. The episode that was there moves to the TOP of the list below, as an .ep-card:
+      <article class="ep-card rise" id="epN">
+        <div class="player-frame"><iframe src="https://www.youtube-nocookie.com/embed/VIDEO_ID?rel=0&amp;modestbranding=1&amp;color=white" title="McMaster MedCast Episode 00N" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+        <div class="ep-info"><span class="num">Episode 00N</span><h3>Title or guest</h3><p>One-line description.</p><a class="link" href="https://youtu.be/VIDEO_ID" target="_blank" rel="noopener">Watch on YouTube</a></div>
       </article>
+      So the order is newest at the top, oldest at the bottom.
       -->
       <div class="ep-list" id="more-episodes"></div>
     </div>
