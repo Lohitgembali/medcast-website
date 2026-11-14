@@ -153,6 +153,19 @@
     });
   }
 
+
+  // Episode chapters: jump the video to a moment
+  document.querySelectorAll('.feature, .ep-card').forEach(card => {
+    const frame = card.querySelector('iframe');
+    if (!frame) return;
+    const base = frame.src.split('&start=')[0];
+    card.querySelectorAll('.chap').forEach(b => b.addEventListener('click', () => {
+      frame.src = base + '&start=' + b.dataset.t + '&autoplay=1';
+      card.querySelectorAll('.chap').forEach(x => x.classList.toggle('on', x === b));
+      frame.closest('.player-frame').scrollIntoView({behavior: reduce ? 'auto' : 'smooth', block: 'center'});
+    }));
+  });
+
   // Home: a voice waveform that becomes a heartbeat
   const cv = $('wave');
   if (!cv) return;
