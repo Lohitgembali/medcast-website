@@ -184,7 +184,7 @@
       return true;
     };
     let opener = null;
-    document.querySelectorAll('.person-btn').forEach(btn => btn.addEventListener('click', () => {
+    document.querySelectorAll('.person-btn, .open-bio').forEach(btn => btn.addEventListener('click', () => {
       if (!fill(btn.dataset.person)) return;
       opener = btn;
       if (pop.showModal) pop.showModal(); else pop.setAttribute('open', '');

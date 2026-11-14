@@ -497,3 +497,9 @@ footer{overflow:hidden;padding-bottom:0}
 .bio-ig{margin-top:26px;gap:10px}
 @media (max-width:520px){.bio-top{flex-direction:column;align-items:flex-start}}
 @media (prefers-reduced-motion:reduce){.bio-pop[open],.bio-pop[open]::backdrop{animation:none}}
+
+/* President card actions */
+.lead-actions{display:flex;align-items:center;gap:22px;flex-wrap:wrap;margin-top:26px}
+.lead-ig{display:inline-flex;align-items:center;gap:8px;font-weight:600;color:#fff;opacity:.85}
+.lead-ig:hover{opacity:1;text-decoration:underline}
+@media (max-width:900px){.lead-actions{justify-content:center}}
