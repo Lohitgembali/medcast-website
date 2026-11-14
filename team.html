@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=202611141243">
+<link rel="stylesheet" href="styles.css?v=202611141514">
 </head>
 <body>
 
@@ -56,14 +56,14 @@
     </div>
     <div class="slider" aria-label="Interviewers">
       <div class="slide-track">
-        <article class="pcard c-n tilt"><span class="mono-av" aria-hidden="true">LG</span><div><span class="role">Interviewer</span><h3>Lohit Gembali</h3></div></article>
-        <article class="pcard c-a tilt"><span class="mono-av" aria-hidden="true">J</span><div><span class="role">Interviewer</span><h3>Jarissan</h3></div></article>
-        <article class="pcard c-g tilt"><span class="mono-av" aria-hidden="true">S</span><div><span class="role">Interviewer</span><h3>Senul</h3></div></article>
-        <article class="pcard c-b tilt"><span class="mono-av" aria-hidden="true">S</span><div><span class="role">Interviewer</span><h3>Sajith</h3></div></article>
-        <article aria-hidden="true" class="pcard c-n tilt"><span class="mono-av" aria-hidden="true">LG</span><div><span class="role">Interviewer</span><h3>Lohit Gembali</h3></div></article>
-        <article aria-hidden="true" class="pcard c-a tilt"><span class="mono-av" aria-hidden="true">J</span><div><span class="role">Interviewer</span><h3>Jarissan</h3></div></article>
-        <article aria-hidden="true" class="pcard c-g tilt"><span class="mono-av" aria-hidden="true">S</span><div><span class="role">Interviewer</span><h3>Senul</h3></div></article>
-        <article aria-hidden="true" class="pcard c-b tilt"><span class="mono-av" aria-hidden="true">S</span><div><span class="role">Interviewer</span><h3>Sajith</h3></div></article>
+        <button type="button" class="pcard c-n tilt person-btn" data-person="lohit" aria-label="Read about Lohit Gembali"><span class="mono-av" aria-hidden="true">LG</span><div><span class="role">Interviewer</span><h3>Lohit Gembali</h3><span class="more">Read more</span></div></button>
+        <button type="button" class="pcard c-a tilt person-btn" data-person="jarissan" aria-label="Read about Jarissan"><span class="mono-av photo" aria-hidden="true" style="background-image:url('assets/team/jarissan.webp')"></span><div><span class="role">Interviewer</span><h3>Jarissan</h3><span class="more">Read more</span></div></button>
+        <button type="button" class="pcard c-g tilt person-btn" data-person="senul" aria-label="Read about Senul"><span class="mono-av" aria-hidden="true">S</span><div><span class="role">Interviewer</span><h3>Senul</h3><span class="more">Read more</span></div></button>
+        <button type="button" class="pcard c-b tilt person-btn" data-person="sajith" aria-label="Read about Sajith"><span class="mono-av" aria-hidden="true">S</span><div><span class="role">Interviewer</span><h3>Sajith</h3><span class="more">Read more</span></div></button>
+        <button type="button" class="pcard c-n tilt person-btn" data-person="lohit" aria-hidden="true" tabindex="-1"><span class="mono-av" aria-hidden="true">LG</span><div><span class="role">Interviewer</span><h3>Lohit Gembali</h3><span class="more">Read more</span></div></button>
+        <button type="button" class="pcard c-a tilt person-btn" data-person="jarissan" aria-hidden="true" tabindex="-1"><span class="mono-av photo" aria-hidden="true" style="background-image:url('assets/team/jarissan.webp')"></span><div><span class="role">Interviewer</span><h3>Jarissan</h3><span class="more">Read more</span></div></button>
+        <button type="button" class="pcard c-g tilt person-btn" data-person="senul" aria-hidden="true" tabindex="-1"><span class="mono-av" aria-hidden="true">S</span><div><span class="role">Interviewer</span><h3>Senul</h3><span class="more">Read more</span></div></button>
+        <button type="button" class="pcard c-b tilt person-btn" data-person="sajith" aria-hidden="true" tabindex="-1"><span class="mono-av" aria-hidden="true">S</span><div><span class="role">Interviewer</span><h3>Sajith</h3><span class="more">Read more</span></div></button>
       </div>
     </div>
     <div class="wrap">
@@ -84,6 +84,24 @@
     <a class="btn" href="get-involved.html">Join the team</a>
   </section>
   <div class="spacer"></div>
+
+  <!-- Interviewer bios: the pop-up reads from here. To add a bio, fill in that person's <p> and links. -->
+  <div class="bios" hidden>
+    <div data-bio="lohit" data-name="Lohit Gembali" data-role="President &amp; Interviewer"><p>Bio coming soon.</p></div>
+    <div data-bio="jarissan" data-name="Jarissan" data-role="Interviewer" data-photo="assets/team/jarissan.webp" data-instagram="jarissanrajamohan"><p>Hey! I’m Jarissan, a 2nd year Honours Life Sciences student here at McMaster. I love trying new foods, watching shows and movies, learning about psychology and neuroscience, and spending time with friends and family. Currently, I’m trying to get into cooking and photography.</p></div>
+    <div data-bio="senul" data-name="Senul" data-role="Interviewer"><p>Bio coming soon.</p></div>
+    <div data-bio="sajith" data-name="Sajith" data-role="Interviewer"><p>Bio coming soon.</p></div>
+  </div>
+
+  <dialog class="bio-pop" id="bioPop" aria-labelledby="bioName">
+    <button type="button" class="bio-close" id="bioClose" aria-label="Close">×</button>
+    <div class="bio-top">
+      <span class="bio-av" id="bioAv"></span>
+      <div><span class="bio-role" id="bioRole"></span><h2 id="bioName"></h2></div>
+    </div>
+    <div class="bio-text" id="bioText"></div>
+    <a class="btn bio-ig" id="bioIg" href="#" target="_blank" rel="noopener" hidden><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg><span id="bioIgText"></span></a>
+  </dialog>
 </main>
 
 <footer>
@@ -101,6 +119,6 @@
 
 <div class="cursor" aria-hidden="true"></div>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
-<script src="site.js?v=202611141243"></script>
+<script src="site.js?v=202611141514"></script>
 </body>
 </html>

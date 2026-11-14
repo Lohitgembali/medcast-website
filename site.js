@@ -166,6 +166,35 @@
     }));
   });
 
+
+  // Interviewer bio pop-up
+  const pop = $('bioPop');
+  if (pop) {
+    const fill = id => {
+      const b = document.querySelector('[data-bio="' + id + '"]'); if (!b) return false;
+      $('bioName').textContent = b.dataset.name;
+      $('bioRole').innerHTML = b.dataset.role || '';
+      $('bioText').innerHTML = b.innerHTML;
+      const av = $('bioAv');
+      if (b.dataset.photo) { av.style.backgroundImage = "url('" + b.dataset.photo + "')"; av.textContent = ''; }
+      else { av.style.backgroundImage = ''; av.textContent = b.dataset.name.split(' ').map(w => w[0]).join('').slice(0, 2); }
+      const ig = $('bioIg');
+      if (b.dataset.instagram) { ig.hidden = false; ig.href = 'https://www.instagram.com/' + b.dataset.instagram + '/'; $('bioIgText').textContent = '@' + b.dataset.instagram; }
+      else ig.hidden = true;
+      return true;
+    };
+    let opener = null;
+    document.querySelectorAll('.person-btn').forEach(btn => btn.addEventListener('click', () => {
+      if (!fill(btn.dataset.person)) return;
+      opener = btn;
+      if (pop.showModal) pop.showModal(); else pop.setAttribute('open', '');
+    }));
+    const close = () => { if (pop.close) pop.close(); else pop.removeAttribute('open'); };
+    $('bioClose').addEventListener('click', close);
+    pop.addEventListener('click', e => { if (e.target === pop) close(); });
+    pop.addEventListener('close', () => { if (opener && opener.tabIndex !== -1) opener.focus(); });
+  }
+
   // Home: a voice waveform that becomes a heartbeat
   const cv = $('wave');
   if (!cv) return;
