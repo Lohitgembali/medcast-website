@@ -402,3 +402,10 @@ footer{overflow:hidden;padding-bottom:0}
   .qa p{padding-right:0}
 }
 @media (prefers-reduced-motion:reduce){.loader{display:none}.marquee .track{animation:none}}
+
+/* Four interviewers */
+.pgrid.four{grid-template-columns:repeat(4,1fr)}
+.pgrid.four .pcard h3{font-size:clamp(30px,2.8vw,40px);line-height:1}
+.pgrid.four .mono-av{font-size:30px}
+@media (max-width:1000px){.pgrid.four{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:520px){.pgrid.four{grid-template-columns:1fr}}
