@@ -523,3 +523,5 @@ footer{overflow:hidden;padding-bottom:0}
 
 /* Photos always fill their circle, whatever the card colour */
 .pcard .mono-av.photo,.pcard.c-g .mono-av.photo{background-color:#2a1a20;background-size:cover;background-position:center;background-repeat:no-repeat;border-color:rgba(255,255,255,.7)}
+
+.bio-ig[hidden]{display:none}
