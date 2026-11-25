@@ -34,7 +34,7 @@
     <div class="wrap">
       <p class="eyebrow grad">Episodes</p>
       <h1>Now <span class="grad">streaming.</span></h1>
-      <p class="sub">Episode 1 is out. Press play and meet the people behind the research.</p>
+      <p class="sub">Episode 2 is out. Press play and meet the people behind the research.</p>
     </div>
   </section>
   <section id="episodes">
@@ -80,7 +80,9 @@
 
       <!-- Adding a new episode (newest always comes first):
       1. The new episode takes the big card at the top (the .feature card, next to the three tiles).
-      2. The episode that was there moves to the TOP of the list below, as an .ep-card:
+      2. The episode that was there moves to the TOP of the list below. Keep it as a full .feature card
+         (same look as the top one, with its chapters) but change its label to "Episode 00N" without the pulsing dot.
+         The plain .ep-card below is the old, smaller style:
       <article class="ep-card rise" id="epN">
         <div class="player-frame"><iframe src="https://www.youtube-nocookie.com/embed/VIDEO_ID?rel=0&amp;modestbranding=1&amp;color=white" title="McMaster MedCast Episode 00N" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
         <div class="ep-info"><span class="num">Episode 00N</span><h3>Title or guest</h3><p>One-line description.</p><a class="link" href="https://youtu.be/VIDEO_ID" target="_blank" rel="noopener">Watch on YouTube</a></div>
@@ -88,9 +90,24 @@
       So the order is newest at the top, oldest at the bottom.
       -->
       <div class="ep-list" id="more-episodes">
-        <article class="ep-card rise" id="ep1">
-          <div class="player-frame"><iframe src="https://www.youtube-nocookie.com/embed/AftTDh2l6xM?rel=0&amp;modestbranding=1&amp;color=white" title="McMaster MedCast Episode 001 with Dr. Argel Aguilar-Valles" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
-          <div class="ep-info"><span class="num">Episode 001</span><h3>Dr. Argel Aguilar-Valles</h3><p>A Carleton neuroscientist on how ketamine works, psychedelics and brain myelination, and what he’d tell his undergrad self.</p><a class="link" href="https://youtu.be/AftTDh2l6xM" target="_blank" rel="noopener">Watch on YouTube</a></div>
+        <article class="feature rise" id="ep1">
+          <div class="feature-head">
+            <span class="live">Episode 001</span>
+            <h2>Dr. Argel Aguilar-Valles</h2>
+            <p class="who">Associate Professor of Neuroscience, Carleton University</p>
+            <p>How does ketamine actually work in the brain, and can psychedelics change brain structure? Lohit and Jarissan talk with a neuroscientist who studies exactly that: his path from a molecular biology class in Mexico to his own lab, why psychiatric disorders are so hard to study, a surprising discovery about psychedelics and brain myelination, and what he’d tell his undergrad self.</p>
+          </div>
+          <div class="player-frame">
+            <iframe src="https://www.youtube-nocookie.com/embed/AftTDh2l6xM?rel=0&amp;modestbranding=1&amp;color=white" title="McMaster MedCast Episode 001 with Dr. Argel Aguilar-Valles" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+          <div class="chapters" aria-label="Chapters">
+            <span class="ch-label">Chapters</span>
+            <div class="chap-row"><button type="button" class="chap" data-t="0"><b>0:00</b>Intro</button><button type="button" class="chap" data-t="5"><b>0:05</b>Welcome</button><button type="button" class="chap" data-t="41"><b>0:41</b>How he got into neuroscience</button><button type="button" class="chap" data-t="174"><b>2:54</b>What his lab studies</button><button type="button" class="chap" data-t="272"><b>4:32</b>Why psychiatric disorders are hard to study</button><button type="button" class="chap" data-t="495"><b>8:15</b>Ethics &amp; animal models</button><button type="button" class="chap" data-t="623"><b>10:23</b>How ketamine works</button><button type="button" class="chap" data-t="727"><b>12:07</b>When research doesn’t go to plan</button><button type="button" class="chap" data-t="883"><b>14:43</b>Psychedelics &amp; brain myelination</button><button type="button" class="chap" data-t="944"><b>15:44</b>Advice to his undergrad self</button><button type="button" class="chap" data-t="1036"><b>17:16</b>Thank you &amp; goodbye</button></div>
+          </div>
+          <div class="feature-foot">
+            <span>Educational purposes only, not medical advice.</span>
+            <a class="link" href="https://youtu.be/AftTDh2l6xM" target="_blank" rel="noopener">Watch on YouTube</a>
+          </div>
         </article>
       </div>
     </div>
