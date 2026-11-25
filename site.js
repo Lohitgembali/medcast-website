@@ -167,6 +167,49 @@
   });
 
 
+  // Episode switcher: a floating dropdown on the Episodes page, built from the episode cards
+  const eps = [...document.querySelectorAll('#episodes .feature[id]')];
+  if (eps.length > 1) {
+    const sw = document.createElement('nav');
+    sw.className = 'ep-switch';
+    sw.setAttribute('aria-label', 'Jump to an episode');
+    const info = eps.map(el => {
+      const num = (el.querySelector('.live')?.textContent.match(/\d{3}/) || [''])[0];
+      return { el, num, name: el.querySelector('h2')?.textContent.trim() || el.id, latest: !!el.querySelector('.live i') };
+    });
+    sw.innerHTML =
+      '<button type="button" class="es-btn" aria-expanded="false" aria-controls="esList">' +
+        '<span class="es-k">Episode</span><span class="es-cur">' + info[0].num + '</span><span class="es-chev" aria-hidden="true"></span>' +
+      '</button>' +
+      '<div class="es-panel" id="esList"><span class="es-title">All episodes</span><ul>' +
+        info.map((e, i) => '<li><button type="button" data-i="' + i + '"><span class="es-num">' + e.num + '</span><span class="es-name">' + e.name +
+          '</span>' + (e.latest ? '<span class="es-new">New</span>' : '') + '</button></li>').join('') +
+      '</ul></div>';
+    document.body.appendChild(sw);
+    const btn = sw.querySelector('.es-btn'), cur = sw.querySelector('.es-cur'), items = [...sw.querySelectorAll('li button')];
+    const setOpen = o => { sw.classList.toggle('open', o); btn.setAttribute('aria-expanded', o); };
+    btn.addEventListener('click', e => { e.stopPropagation(); setOpen(!sw.classList.contains('open')); });
+    document.addEventListener('click', e => { if (!sw.contains(e.target)) setOpen(false); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') { setOpen(false); btn.focus(); } });
+    items.forEach(b => b.addEventListener('click', () => {
+      info[+b.dataset.i].el.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
+      setOpen(false);
+    }));
+    const mark = i => { cur.textContent = info[i].num; items.forEach((b, k) => b.classList.toggle('on', k === i)); };
+    mark(0);
+    // show once the visitor reaches the episodes, follow along as they scroll
+    const section = document.getElementById('episodes');
+    const onScroll = () => {
+      const r = section.getBoundingClientRect();
+      sw.classList.toggle('show', r.top < innerHeight * .6 && r.bottom > innerHeight * .4);
+      let best = 0;
+      info.forEach((e, i) => { if (e.el.getBoundingClientRect().top < innerHeight * .45) best = i; });
+      mark(best);
+    };
+    addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  }
+
   // Interviewer bio pop-up
   const pop = $('bioPop');
   if (pop) {
